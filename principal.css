@@ -1,0 +1,197 @@
+*{
+    font-family: 'Viaoda Libre', cursive;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+:root{
+    --azul: rgb(0, 112, 192);
+    --gris_claro: rgb(175, 171, 171);
+    --gris_oscuro: rgb(104, 104, 105);
+    --blanco: rgb(255, 255, 255);
+}
+
+div{
+    display: block;
+}
+
+.header-container{
+    background-color:  var(--azul);
+    display: flex;
+    padding: 0.25em 0.5em;
+    height: 12vh;
+    width: 100vw;
+    align-items: center;
+    align-content: center;
+}
+
+.header-container_i{
+    margin: 0;
+    min-width: 200px;
+    min-height: 65px;
+}
+
+.header-container_i img{
+    max-height: 10vh;
+    border-radius: 15px;
+}
+/*-----------------------------------------------------------------------------------------------------------*/
+.slide-container{
+    background-color: var(--blanco);
+    display: flex;
+    height: 40vh;
+    flex-flow: column;
+    flex-basis: 100vw;
+}
+
+.slide-container_ul{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-top: 2.5vh;
+    margin: 0 auto;
+    height: 30vh;
+    width: 50vw;
+    box-sizing: content-box;
+}
+
+.slide-container_li{
+    position: absolute;
+    list-style: none;
+    object-fit: contain;
+    align-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.slide-container_li img{
+    max-height: 30vh;
+    max-width: 50vw;
+    min-height: 200px;
+    min-width: 270px;
+    object-fit: cover;
+    flex-grow: 1;
+}
+
+.slide-container_selector{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 2vh;
+    height: 5vh;
+    width: 30vw;
+}
+
+.circles{
+    display: inline-block;
+    background-color: gray;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    margin-left: 2px;
+    margin-right: 2px;
+    flex-shrink: 0;
+}
+
+.circles a{
+    text-decoration: none;
+    color: #000;
+    font-size: 13px;
+    padding-left: 5px;
+    padding-top: -20px;
+}
+
+.slide-container_li:first-child{
+    opacity: 1;
+}
+
+.slide-container_ul li:target{
+    opacity: 1;
+}
+
+/*------------------------------------------------------------------------------------------------------------*/
+.main-container{
+    background-color: saddlebrown;
+    display: flex;
+    height: 20vh;
+}
+
+/*------------------------------------------------------------------------------------------------------------*/
+.socialm-container{
+    background-color: var(--gris_oscuro);
+    padding-top: 5vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+}
+
+.socialm-container_logo{
+    display: flex;
+    width: 18rem;
+    justify-content: space-between;
+}
+
+.socialm-container_ref{
+    display: flex;
+    width: 20rem;
+    justify-content: space-between;
+}
+
+
+/*------------------------------------------------------------------------------------------------------------*/
+.footer-container{
+    background-color: var(--gris_claro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 10vh;
+    font-size: 15px;
+}
+
+@media screen and (max-width:700px) and (min-width: 300px){
+    .header-container{
+        display: flex;
+        width: 1fr;
+        height: 7vh;
+    }
+
+    .header-container_i{
+        padding-top: 15px;
+    }
+
+    .header-container_i img{
+        margin: 0;
+        max-width: 100px;
+        max-height: 35px;
+    }
+
+    .slide-container_ul{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        padding-top: 2.5vh;
+        margin: 0 auto;
+        height: 30vh;
+    }
+
+    .slide-container_li img{
+        min-width: 150px;
+        min-height: 150px;
+        max-width: 280px;
+        max-height: 180px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 300px){
+    .slide-container_li img{
+        min-width: 150px;
+        min-height: 150px;
+        max-width: 200px;
+        max-height: 200px;
+        object-fit: cover;
+    }
+}
